@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bqr-tN-d5m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qi4-bM-JXF">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -56,7 +57,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863.20000000000005" y="133.74384236453201"/>
+            <point key="canvasLocation" x="1313" y="134"/>
+        </scene>
+        <!--Onboarding View Controller-->
+        <scene sceneID="IDK-az-2T3">
+            <objects>
+                <viewController id="qi4-bM-JXF" customClass="onboardingViewController" customModule="ruangMC3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0oD-C5-Ftr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ij-ju-WTW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RLp-11-2cQ">
+                                        <rect key="frame" x="148" y="733" width="78" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="78" id="VVA-rA-HmS"/>
+                                        </constraints>
+                                    </pageControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="centerX" secondItem="2Ij-ju-WTW" secondAttribute="centerX" id="1Ss-tP-anS"/>
+                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="bottom" secondItem="2Ij-ju-WTW" secondAttribute="bottomMargin" id="9XU-HD-bAV"/>
+                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="top" secondItem="2Ij-ju-WTW" secondAttribute="top" constant="733" id="rMG-Ap-Dxh"/>
+                                    <constraint firstAttribute="trailing" secondItem="RLp-11-2cQ" secondAttribute="trailing" constant="149" id="rwu-Fm-a7j"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2Ij-ju-WTW" secondAttribute="trailing" id="SHv-Wd-7l8"/>
+                            <constraint firstItem="2Ij-ju-WTW" firstAttribute="top" secondItem="0oD-C5-Ftr" secondAttribute="top" id="TxD-er-adT"/>
+                            <constraint firstAttribute="bottom" secondItem="2Ij-ju-WTW" secondAttribute="bottom" id="X4T-dv-Jg6"/>
+                            <constraint firstItem="2Ij-ju-WTW" firstAttribute="leading" secondItem="0oD-C5-Ftr" secondAttribute="leading" id="Y0R-2r-tLT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Azy-Gj-bGU"/>
+                    </view>
+                    <connections>
+                        <outlet property="pageControll" destination="RLp-11-2cQ" id="wJ5-xj-HWc"/>
+                        <outlet property="scrollView" destination="2Ij-ju-WTW" id="GVs-8Z-w8f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M5F-uZ-lNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557.60000000000002" y="825.3694581280788"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="guf-RL-kCH">
@@ -111,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYQ-W8-9EL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1574" y="134"/>
+            <point key="canvasLocation" x="2036" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="EgS-dG-NA7">
@@ -196,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jI-no-dzJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2313" y="134"/>
+            <point key="canvasLocation" x="2692" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="leD-Yj-kl3">
@@ -259,7 +304,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qwB-De-Q3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2991" y="134"/>
+            <point key="canvasLocation" x="3399" y="132"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="3mT-OG-1pU">
