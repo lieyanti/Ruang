@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -67,41 +66,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ij-ju-WTW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                                <subviews>
-                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="RLp-11-2cQ">
-                                        <rect key="frame" x="148" y="733" width="78" height="37"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="78" id="VVA-rA-HmS"/>
-                                        </constraints>
-                                    </pageControl>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="centerX" secondItem="2Ij-ju-WTW" secondAttribute="centerX" id="1Ss-tP-anS"/>
-                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="bottom" secondItem="2Ij-ju-WTW" secondAttribute="bottomMargin" id="9XU-HD-bAV"/>
-                                    <constraint firstItem="RLp-11-2cQ" firstAttribute="top" secondItem="2Ij-ju-WTW" secondAttribute="top" constant="733" id="rMG-Ap-Dxh"/>
-                                    <constraint firstAttribute="trailing" secondItem="RLp-11-2cQ" secondAttribute="trailing" constant="149" id="rwu-Fm-a7j"/>
-                                </constraints>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KBp-VY-aNa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="511"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-fY-qe3">
+                                <rect key="frame" x="124" y="461" width="126" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="pageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub5-8x-41p">
+                                <rect key="frame" x="45" y="666" width="284" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="btnLanjut"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2Ij-ju-WTW" secondAttribute="trailing" id="SHv-Wd-7l8"/>
-                            <constraint firstItem="2Ij-ju-WTW" firstAttribute="top" secondItem="0oD-C5-Ftr" secondAttribute="top" id="TxD-er-adT"/>
-                            <constraint firstAttribute="bottom" secondItem="2Ij-ju-WTW" secondAttribute="bottom" id="X4T-dv-Jg6"/>
-                            <constraint firstItem="2Ij-ju-WTW" firstAttribute="leading" secondItem="0oD-C5-Ftr" secondAttribute="leading" id="Y0R-2r-tLT"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Azy-Gj-bGU"/>
                     </view>
                     <connections>
-                        <outlet property="pageControll" destination="RLp-11-2cQ" id="wJ5-xj-HWc"/>
-                        <outlet property="scrollView" destination="2Ij-ju-WTW" id="GVs-8Z-w8f"/>
+                        <outlet property="pageControll" destination="jRO-fY-qe3" id="1Ny-hb-PiO"/>
+                        <outlet property="scrollView" destination="KBp-VY-aNa" id="R9o-Lw-52A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M5F-uZ-lNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="557.60000000000002" y="825.3694581280788"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="Lj1-oO-eez">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="H92-yx-bVj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xYo-7g-Ekf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1553" y="825"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Oy4-nV-O6I">
+            <objects>
+                <viewController id="INg-TT-M3h" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7sf-5f-UHE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ouc-yF-aRj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUk-XM-TYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2310" y="825"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="guf-RL-kCH">
@@ -322,4 +336,7 @@
             <point key="canvasLocation" x="4117" y="132"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnLanjut" width="255" height="77"/>
+    </resources>
 </document>

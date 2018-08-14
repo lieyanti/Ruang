@@ -42,7 +42,8 @@ class onboardingViewController: UIViewController , UIScrollViewDelegate {
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        var pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
+       var pageNumber = scrollView.contentOffset.x /
+            scrollView.frame.size.width
         
         pageControll.currentPage = Int(pageNumber)
     }
