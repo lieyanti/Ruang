@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B0EA9E02122DE5200CD269A /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EA9DF2122DE5200CD269A /* onboardingViewController.swift */; };
+		2B0EA9E22122E9FF00CD269A /* PageControlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0EA9E12122E9FF00CD269A /* PageControlViewController.swift */; };
 		88C322F02122AC590030DADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C322EF2122AC590030DADE /* AppDelegate.swift */; };
 		88C322F22122AC590030DADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C322F12122AC590030DADE /* ViewController.swift */; };
 		88C322F52122AC5A0030DADE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88C322F32122AC5A0030DADE /* Main.storyboard */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B0EA9DF2122DE5200CD269A /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingViewController.swift; sourceTree = "<group>"; };
+		2B0EA9E12122E9FF00CD269A /* PageControlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlViewController.swift; sourceTree = "<group>"; };
 		88C322EC2122AC590030DADE /* ruangMC3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ruangMC3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C322EF2122AC590030DADE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88C322F12122AC590030DADE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +39,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B0EA9E32123B54E00CD269A /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				88C322EF2122AC590030DADE /* AppDelegate.swift */,
+				88C322F92122AC5B0030DADE /* Assets.xcassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		2B0EA9E42123B58400CD269A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88C322F12122AC590030DADE /* ViewController.swift */,
+				2B0EA9E12122E9FF00CD269A /* PageControlViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2B0EA9E52123B5B700CD269A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				88C322FB2122AC5B0030DADE /* LaunchScreen.storyboard */,
+				88C322F32122AC5A0030DADE /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B0EA9E62123B61B00CD269A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		88C322E32122AC590030DADE = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +92,10 @@
 		88C322EE2122AC590030DADE /* ruangMC3 */ = {
 			isa = PBXGroup;
 			children = (
-				88C322EF2122AC590030DADE /* AppDelegate.swift */,
-				88C322F12122AC590030DADE /* ViewController.swift */,
-				2B0EA9DF2122DE5200CD269A /* onboardingViewController.swift */,
-				88C322F32122AC5A0030DADE /* Main.storyboard */,
-				88C322F92122AC5B0030DADE /* Assets.xcassets */,
-				88C322FB2122AC5B0030DADE /* LaunchScreen.storyboard */,
+				2B0EA9E62123B61B00CD269A /* Model */,
+				2B0EA9E52123B5B700CD269A /* View */,
+				2B0EA9E42123B58400CD269A /* Controller */,
+				2B0EA9E32123B54E00CD269A /* Supporting */,
 				88C322FE2122AC5B0030DADE /* Info.plist */,
 				88C322F62122AC5A0030DADE /* ruangMC3.xcdatamodeld */,
 			);
@@ -143,8 +175,8 @@
 			files = (
 				88C322F22122AC590030DADE /* ViewController.swift in Sources */,
 				88C322F02122AC590030DADE /* AppDelegate.swift in Sources */,
+				2B0EA9E22122E9FF00CD269A /* PageControlViewController.swift in Sources */,
 				88C322F82122AC5A0030DADE /* ruangMC3.xcdatamodeld in Sources */,
-				2B0EA9E02122DE5200CD269A /* onboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
